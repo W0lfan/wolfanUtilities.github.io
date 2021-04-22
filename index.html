@@ -1,1 +1,41 @@
-Hello World
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<title>Starblast Ship Balancer</title>
+		<link rel="stylesheet" href="styles.css">
+		<script src="main.js"></script>
+  </head>
+  
+  <body onload="onLoad()">
+
+		<section id="data_in">
+			<h4>Vital numbers</h4>
+			<div id="input_ship_number">
+				<label for="ship_number">Number of ships to balance:</label>
+				<input type="number" placeholder="1 to 100" id="ship_number" name="ship_number" min="1" max="100" autofocus onchange="changeShipNumber()"><br>
+			</div>
+			<hr>
+			<h4>Ship type distribution</h4>
+			<div id="input_heavy_number">
+				<label for="heavy_number">Number of heavy ships:</label>
+				<input type="number" id="heavy_number" name="heavy_number" min="0" onchange="changeHeavyNumber()"><br>
+			</div>
+			<div id="input_speedster_number">
+				<label for="speedster_number">Number of speedster ships:</label>
+				<input type="number" id="speedster_number" name="speedster_number" min="0" onchange="changeSpeedsterNumber()"><br>
+			</div>
+			<div id="input_balanced_number">
+				<label for="balanced_number">Number of balanced ships:</label>
+				<input type="number" id="balanced_number" name="balanced_number" min="0" onchange="changeBalancedNumber()"><br>
+			</div>
+			<hr>
+			<h4>Misc stats</h4>
+			<div id="input_ship_speed">
+				<label for="ship_speed">Speed multiplier on ship balancing:</label>
+				<input type="number" placeholder="1 to 3" id="ship_speed" name="ship_speed" min="1" max="3"><br>
+			</div>
+		</section>
+
+  </body>
+</html> 

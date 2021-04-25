@@ -1,45 +1,33 @@
 
-var typeInfos = {
-    heavy: 1,
-    heavySpeedMax: 100,
-    speedster: 3,
-    both: 2
-}
 
 
 
 
-var start = function(number, speed, numberOfHeavy, numberOfSpeedster, NumberOfBoth, type) {
-    var totalShips = numberOfHeavy + numberOfSpeedster + NumberOfBoth;
-    var speedHeavy = 1*speed*15;
-    if (totalShips === number && speed <= 3) {
-        console.log(`Informations acquired:\nNumber of ships to balance: ${number};\nStrengh: ${speed};\nNumber of heavy ships: ${numberOfHeavy};\nNumber of Speedster ships: ${numberOfSpeedster};\nNumber of both (speedster & heavy): ${NumberOfBoth}.`)
-        var heavySpeed = new Array();
-        for (let i=1;i<numberOfHeavy+1;i++) {
-            if (speed*10*i >= 100 || speedHeavy >= 100) {
-                console.log('ERROR || Resolving issue..')
-                if (speedHeavy-=speed*type <= 100) {
-                    speedHeavy-= speed*type;
-                } else if (speedHeavy-=speed*type >= 100){
-                    speedHeavy= 100; 
-                    speedHeavy-= speed*type;
-                }
-                heavySpeed.push(Number(speedHeavy));
-                console.log(`Speed of heavy ship ${i}: ${speedHeavy}\n(${speedHeavy}, ${i})`);
-            } else {
-                console.log(`Speed of heavy ship ${i}: ${speedHeavy}\n(${speedHeavy}, ${i})`);
-                heavySpeed.push(Number(speedHeavy));
-                speedHeavy+= speed*10*i;
-            }
-        }
-    } else if (totalShips !== number){
-        console.log(`Error: asked to balance ${number} ships but ${totalShips} are heavy/speedster/both of heavy and speedster.\nPlease try again with correct values.`)
-    } else if (speed > 3 || speed == 0) {
-        console.log('Error: wrong speed value.')
-    } else if (type >= 8) {
-        console.log(`Error: ${type} is not a valid level of ship.`)
-    } else if (numberOfHeavy === 0 && numberOfSpeedster === 0 && NumberOfBoth === 0) {
-        console.log('Error: no ships to balance (0 speedster ships to balance, 0 heavy ships to balance, 0 both speedster and heavy ships to balance)')
-    }
- };
-start(8,3, 4,3,1, 5);
+
+
+var main_balance = function(factorPower, NumHeavy, NumSpeed, NumSupport, tier) {
+    console.log(`Factor power: ${factorPower}\nNumber of heavy ships: ${NumHeavy}\nNumber of speedster ships: ${NumSpeed}\nNumber of support ships: ${NumSupport}\nTier of the ships: ${tier} `)
+    var maximumShieldValue;
+    var maximumSpeedValue;
+    var heavyValue = [];
+    //Values positions:
+    // * Maximum Shield Value
+    // * Maximum Speed Value
+    if (tier === 7) {
+        maximumShieldValue = (tier+1)*100;        
+    };
+    if (tier === 6) {maximumShieldValue = (tier-factorPower*2)+f^2*100;}
+    if (tier === 5) {maximumShieldValue = ((tier+factorPower)*100)-100;}
+    if (tier === 4) {maximumShieldValue = (-1+tier)*factorPower*100;}
+    if (tier === 3) {maximumShieldValue;}
+    if (tier === 2) {maximumShieldValue = tier^5*5+factorPower*15;}
+    if (tier === 1) {maximumShieldValue = tier*factorPower*100;}
+    maximumSpeedValue = 70+factorPower*10;
+    maximumShieldRegenValue = 10*(0.5+factorPower/2);
+    heavyValue.push(maximumShieldValue);
+    heavyValue.push(maximumShieldRegenValue);
+    console.log(heavyValue);
+};
+
+
+main_balance(3,2,6,4,5)

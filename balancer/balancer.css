@@ -1,0 +1,110 @@
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background-color: #a0a8aa;
+	color: aliceblue;
+	margin: 0;
+}
+
+p {
+	color: aliceblue;
+	padding: 5px;
+}
+
+label {
+	display: inline-block;
+	width: 30ch;
+}
+
+input {
+	background-color: #0a1423;
+	color: aliceblue;
+	margin: 3px;
+	padding: 8px;
+	border: 1px solid aliceblue;
+	border-radius: 0px;
+	outline: none;
+	box-shadow: none;
+}
+
+button {
+	outline: none;
+	box-shadow: none;
+	border: 1px solid aliceblue;
+}
+
+select {
+	background-color: #0a1423;
+	color: aliceblue;
+	margin: 3px;
+	padding: 8px;
+	border: 1px solid aliceblue;
+	border-radius: 0px;
+	outline: none;
+	box-shadow: none;
+	min-width: 7%;
+	display: none;
+}
+
+hr {
+	color: aliceblue;
+}
+
+header a {
+	text-decoration: none;
+	color: aliceblue;
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	min-height: 6%;
+	background-color: #0a1423;
+}
+
+header h2 {
+	margin: 0;
+	padding: 1%;
+	height: 100%;
+	text-align: left;
+}
+
+header button {
+	background-color: #0a1423;
+}
+
+.data_in, .data_out {
+	background-color: #0a1423;
+	margin: 1%;
+	margin-top: 1%;
+	padding: 1%;
+	padding-top: 1px;
+	box-shadow: 2px 3px 1px 1px #222;
+}
+
+.data_in button {
+	color: aliceblue;
+	background-color: #0a1423;
+	margin: 5px;
+	margin-top: 18px;
+	padding: 5px;
+	border-radius: 0px;
+}
+
+.data_in button:hover, .data_out button:hover {
+	background-color: #407595;
+}
+
+.data_out button {
+	color: aliceblue;
+	background-color: #0a1423;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 5px;
+	border-radius: 0px;
+}
+
+.content {
+	display: none;
+}
